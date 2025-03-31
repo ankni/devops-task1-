@@ -12,6 +12,7 @@ jobs:
   my_test:
     runs-on: ubuntu-latest
     steps:
+    - name: Clone my repo
     - uses: actions/checkout@v1
     - name: Set PACKAGE_NAME
       run: echo "PACKAGE_NAME=deploy-ver-${{ github.sha }}" >> $GITHUB_ENV
@@ -25,6 +26,12 @@ jobs:
       run: |
         echo "This is string 1"
         echo "Next job has ${{ env.PACKAGE_NAME }}"
+        
+  my_LoL:
+    runs-on: ubuntu-latest
+    steps:
+    - name: This is only for traing
+      run : ls -la
 
   my_deploy:
     runs-on: ubuntu-latest
