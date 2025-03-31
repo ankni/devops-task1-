@@ -24,16 +24,17 @@ jobs:
       run: |
         echo "This is string 1"
         echo "Next job has ${{ env.PACKAGE_NAME }}"
-        
+
   my_LoL:
     runs-on: ubuntu-latest
     steps:
-    - name: This is only for traing
-      run : ls -la
-    - name: THis for ander how worr uses  
-    - uses: actions/checkout@v1
+    - name: This is only for training
+      run: ls -la
+    - name: Understanding how actions work
+      run: echo "Checking how GitHub Actions works"
+    - uses: actions/checkout@v4
     - name: Next step
-      run : ls -la
+      run: ls -la
 
   my_deploy:
     runs-on: ubuntu-latest
