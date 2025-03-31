@@ -12,8 +12,6 @@ jobs:
   my_test:
     runs-on: ubuntu-latest
     steps:
-    - name: Clone my repo
-    - uses: actions/checkout@v1
     - name: Set PACKAGE_NAME
       run: echo "PACKAGE_NAME=deploy-ver-${{ github.sha }}" >> $GITHUB_ENV
     - name: Run a one-line script
