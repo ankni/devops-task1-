@@ -1,0 +1,27 @@
+# This my first CI/CD in GitHub
+
+name: Stas-CICD
+
+on: 
+  push:
+    branches: 
+      - main
+
+jobs:
+  my_test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: "echo Hellp, world! From Test"
+    - name: Run a mulri-line script
+      run: 
+        echo "Add other actions to build,"
+        echo "test a mulri-line project."
+
+
+  my_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run : echo "Hello World! From Deploy"
