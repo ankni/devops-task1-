@@ -30,6 +30,9 @@ jobs:
     steps:
     - name: This is only for traing
       run : ls -la
+    - name: THis for ander how worr uses  
+    - uses: actions/checkout@v1
+      run : ls -la
 
   my_deploy:
     runs-on: ubuntu-latest
