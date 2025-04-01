@@ -25,8 +25,8 @@ jobs:
         
     - name: This is var
       run: |
-        echo "Var is ${{ enx.VAR1 }}
-        echo "Var2 is $Local_VAR
+        echo "Var is ${{ enx.VAR1 }}"
+        echo "Var2 is $Local_VAR"
       env:
         Local_VAR: "123"
     
