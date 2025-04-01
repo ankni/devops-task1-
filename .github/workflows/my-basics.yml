@@ -51,4 +51,4 @@ jobs:
         echo "This is string 1"
         echo "Hello ${{ env.APPLICATION_NAME }}"
     - name: Do we have azure?
-      run: azure --version
+      run: az --version
