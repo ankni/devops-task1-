@@ -12,7 +12,7 @@ jobs:
   my_test:
     runs-on: ubuntu-latest
     env:
-      VAR1: "This is job level variabke"
+      VAR1: "This is job level variable"
     steps:
     - name: Set PACKAGE_NAME
       run: echo "PACKAGE_NAME=deploy-ver-${{ github.sha }}" >> $GITHUB_ENV
@@ -22,18 +22,12 @@ jobs:
       run: |
         echo "Add other actions to build,"
         echo "test a multi-line project."
-        
     - name: This is var
       run: |
-        echo "Var is ${{ enx.VAR1 }}"
+        echo "Var is ${{ env.VAR1 }}"
         echo "Var2 is $Local_VAR"
       env:
         Local_VAR: "123"
-    
-    - name: Execute few commands
-      run: |
-        echo "This is string 1"
-        echo "Next job has ${{ env.PACKAGE_NAME }}"
 
   my_LoL:
     runs-on: ubuntu-latest
